@@ -21,28 +21,28 @@ const UserProfile = ({username, firstName, lastName, email, initials}) => {
           <div className="container">
             <div className="form-group usernameField">
               <div><label>Username</label><br></br>
-              <input type="text" class="form-control" name="username" value={username} disabled /></div>
+              <input type="text" className="form-control" name="username" value={username} disabled /></div>
             </div>
             <div className="form-group firstNameField">
               <div><label>First Name</label><br></br>
-              <input type="text" class="form-control" name="firstname" value={firstName} /></div>
+              <input type="text" className="form-control" name="firstname" value={firstName} /></div>
             </div>
             <div className="form-group lastNameField">
               <div><label>Last Name</label><br></br>
-              <input type="text" class="form-control" name="lastname" value={lastName} /></div>
+              <input type="text" className="form-control" name="lastname" value={lastName} /></div>
             </div>
             <div className="form-group emailField">
               <div><label>Email</label><br></br>
               <input
                 type="email"
-                class="form-control"
+                className="form-control"
                 name="email"
                 value={email}
                 onChange={() => {
                 }}
               /></div>
             </div>
-            <div ><button class="btn submitButton" type="submit">Submit</button>
+            <div ><button className="btn submitButton" type="submit">Submit</button>
             </div>
           </div>
         </form>
