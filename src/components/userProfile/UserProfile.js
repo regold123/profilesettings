@@ -3,9 +3,6 @@ import "./UserProfile.css";
 
 const UserProfile = ({username, firstName, lastName, email, initials}) => {
 
-
-
-
   return (
     <div className="profilePage">
       <div className="settingsHeader">
@@ -21,15 +18,15 @@ const UserProfile = ({username, firstName, lastName, email, initials}) => {
           <div className="container">
             <div className="form-group usernameField">
               <div><label>Username</label><br></br>
-              <input type="text" className="form-control" name="username" value={username} disabled /></div>
+              <input type="text" className="form-control" name="username" defaultValue={username} disabled /></div>
             </div>
             <div className="form-group firstNameField">
               <div><label>First Name</label><br></br>
-              <input type="text" className="form-control" name="firstname" value={firstName} /></div>
+              <input type="text" className="form-control" name="firstname" defaultValue={firstName} /></div>
             </div>
             <div className="form-group lastNameField">
               <div><label>Last Name</label><br></br>
-              <input type="text" className="form-control" name="lastname" value={lastName} /></div>
+              <input type="text" className="form-control" name="lastname" defaultValue={lastName} /></div>
             </div>
             <div className="form-group emailField">
               <div><label>Email</label><br></br>
@@ -37,9 +34,7 @@ const UserProfile = ({username, firstName, lastName, email, initials}) => {
                 type="email"
                 className="form-control"
                 name="email"
-                value={email}
-                onChange={() => {
-                }}
+                defaultValue={email}
               /></div>
             </div>
             <div ><button className="btn submitButton" type="submit">Submit</button>
