@@ -1,25 +1,65 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import users from "./users/users.js";
+import Header from "./components/header/Header"
+import UserProfile from "./components/userProfile/UserProfile"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+      this.state = {
+      }
+  }
+
+
+  loadUsers() {
+    this.setState({
+      userId: users[0].userId,
+      username: users[0].username,
+      firstName: users[0].firstName,
+      lastName: users[0].lastName,
+      email: users[0].email,
+    });
+    this.getInitials(users[0].firstName, users[0].lastName);
+  }
+
+  getInitials(firstName, lastName) {
+    var firstInitial = firstName.slice(0,1);
+    var secondInitial = lastName.slice(0,1);
+    var initials = firstInitial + secondInitial
+    this.setState({
+      initials: initials,
+    });
+  }
+
+  componentDidMount() {
+    this.loadUsers();
+  }
+
+  render() {
+    const userId = this.state.userId;
+    const username = this.state.username;
+    const firstName = this.state.firstName;
+    const lastName = this.state.lastName;
+    const email = this.state.email;
+    const initials = this.state.initials;
+
+    return (
+      <div className="App">
+        <Header
+          name={firstName}
+        />
+
+        <UserProfile
+          username={username}
+          firstName={firstName}
+          lastName={lastName}
+          email={email}
+          initials={initials}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;

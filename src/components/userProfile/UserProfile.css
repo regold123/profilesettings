@@ -1,0 +1,73 @@
+.pageHeading {
+  color: #565656;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.settingsHeader {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.userCircle {
+  color: white;
+  font-size: 35px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #10699c, #1587ab);
+  display: inline-block;
+}
+
+
+.userCircle p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.profileSettingsForm {
+  background-color: #f5f5f5;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.container {
+  width: 500px;
+}
+
+.form-control {
+  max-width: 500px;
+  font-size: 25px;
+  display: inline-block;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px #939393;
+}
+
+label {
+  font-size: 18px;
+  float: left;
+}
+
+input[type='text']:disabled {
+  max-width: 500px;
+  font-size: 25px;
+  display: inline-block;
+  color: #939393;
+  background-color: white;
+  border: 0.5px solid #6e6e6e;
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+.submitButton {
+  color: white;
+  border: none;
+  background-color: #01747a;
+  background-image: linear-gradient(to right, #01747a, #1c9799);
+}
+
+button:hover {
+  color: white;
+}
